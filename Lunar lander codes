@@ -2,7 +2,12 @@
 //to download images go to the github repository - ""
 
 cleari()
-drawStage(black)
+drawStage(noColor)
+val cb = canvasBounds
+var bg = scale(2.7, 2.95) -> Picture.image("C:/Users/devan/Desktop/Learning material/lunar lander game (kojo4)/sky2.png")
+bg.setPosition(cb.x, cb.y)
+bg.setOpacity(0.6)
+draw(bg)
 
 class Lander {
     val rocket = scale(0.2, 0.2) -> Picture.image("C:/Users/devan/Desktop/Learning material/lunar lander game (kojo4)/rocket.png")
@@ -88,7 +93,6 @@ class Lander {
 class Moon {
     val moon = scale(0.6, 0.6) -> Picture.image("C:/Users/devan/Desktop/Learning material/lunar lander game (kojo4)/moon.png")
     val crashedMoon = scale(0.6, 0.6) -> Picture.image("C:/Users/devan/Desktop/Learning material/lunar lander game (kojo4)/crashedMoon.png")
-    val cb = canvasBounds
 
     moon.setPosition(cb.x + 250, cb.y - 260)
     crashedMoon.setPosition(cb.x + 250, cb.y - 260)
